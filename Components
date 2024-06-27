@@ -1,0 +1,13 @@
+Components for the restaurant’s architectural framework
+Several crucial elements and factors are considered while creating the cloud computing architectural framework that is customized to the specific requirements of Enchanted Bistro Restaurant. To create a framework that supports Enchanted Bistro's objectives of efficiency, scalability, and security, it is essential to comprehend the restaurant's particular demands.
+o	Selecting a Cloud Provider: Utilizing AWS ensures comprehensive services, scalability, and reliability.
+o	AWS Regions and Availability Zones: Using "us-east-1" for resource deployment and "AZ-A" and "AZ-B" for availability zones ensures redundancy.
+o	Virtual Private Cloud (VPC): The main component of the architecture is the VPC, designated "Prakriti-Enchanted-Bistro-VPC," which acts as a separate network environment for hosting Enchanted Bistro's resources and has a CIDR block of "192.168.0.0/16."
+o	Subnets: For scalability and segregation, the subnets "prakriti-public-subnet-1a," "prakriti-private-subnet-1a," "prakriti-public-subnet-1b," and "prakriti-private-subnet-1b" are dispersed among availability zones.
+o	Route Tables: The configuration of the "Prakriti-public-RT" and "Prakriti-private-RT" route tables controls traffic flow. 
+o	NAT Gateways: "Prakriti-Nat-Gateway" gives resources within private subnets access to the outside world (internet).
+o	Internet Gateway: The "Prakriti-Internet-gateway" offers a communication channel between the internet and VPC.
+o	Security Groups: By managing both inbound and outbound traffic to EC2 instances and other resources, "Enchanted-Bistro-SG" security groups are configured to provide security.
+o	Auto Scaling Groups: "Enchanted-Bistro-ASG" optimize resource usage by dynamically adjusting EC2 instances in response to demand.
+o	Application Load Balancer (ALB): "enchanted-prakriti-lb" distributes web traffic equally across EC2 instances.
+o	WordPress Deployment: The Enchanted Bistro WordPress website has been fully deployed on EC2 instances, offering a framework for website management and content delivery.
